@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  wordpress:
+    container_name: ${PROJECT_NAME}
+    image: wordpress:latest
+    volumes:
+      - ~/repos/${PROJECT_NAME}/wp-content:/var/www/html/wp-content
+    ports:
+      - ${CLIENT_PORT}:80
+    restart: always
+    networks:
+      - webnet1
+    environment:
+      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+networks:
+  webnet1:
+    name: webnet1
+    external: true

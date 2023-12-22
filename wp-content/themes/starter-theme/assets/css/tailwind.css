@@ -1,0 +1,330 @@
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-gradient-from-position:  ;
+  --tw-gradient-via-position:  ;
+  --tw-gradient-to-position:  ;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  
+}
+
+.absolute {
+  position: absolute
+}
+
+.relative {
+  position: relative
+}
+
+.right-2 {
+  right: 0.5rem
+}
+
+.top-2 {
+  top: 0.5rem
+}
+
+.right-4 {
+  right: 1rem
+}
+
+.top-4 {
+  top: 1rem
+}
+
+.top-8 {
+  top: 2rem
+}
+
+.right-8 {
+  right: 2rem
+}
+
+.right-6 {
+  right: 1.5rem
+}
+
+.top-16 {
+  top: 4rem
+}
+
+.top-12 {
+  top: 3rem
+}
+
+.z-\[999\] {
+  z-index: 999
+}
+
+.flex {
+  display: flex
+}
+
+.hidden {
+  display: none
+}
+
+.h-12 {
+  height: 3rem
+}
+
+.h-full {
+  height: 100%
+}
+
+.min-h-screen {
+  min-height: 100vh
+}
+
+.w-12 {
+  width: 3rem
+}
+
+.w-full {
+  width: 100%
+}
+
+.w-screen {
+  width: 100vw
+}
+
+.max-w-fit {
+  max-width: -moz-fit-content;
+  max-width: fit-content
+}
+
+.flex-grow {
+  flex-grow: 1
+}
+
+.flex-col {
+  flex-direction: column
+}
+
+.items-center {
+  align-items: center
+}
+
+.justify-center {
+  justify-content: center
+}
+
+.justify-between {
+  justify-content: space-between
+}
+
+.gap-4 {
+  gap: 1rem
+}
+
+.gap-x-8 {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem
+}
+
+.gap-x-12 {
+  -moz-column-gap: 3rem;
+       column-gap: 3rem
+}
+
+.gap-y-12 {
+  row-gap: 3rem
+}
+
+.gap-y-16 {
+  row-gap: 4rem
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem
+}
+
+.px-\[5\%\] {
+  padding-left: 5%;
+  padding-right: 5%
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem
+}
+
+.pr-4 {
+  padding-right: 1rem
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex
+  }
+
+  .md\:hidden {
+    display: none
+  }
+}
+
+.\[\&\>ul\]\:flex>ul {
+  display: flex
+}
+
+.\[\&\>ul\]\:list-none>ul {
+  list-style-type: none
+}
+
+.\[\&\>ul\]\:flex-col>ul {
+  flex-direction: column
+}
+
+.\[\&\>ul\]\:items-center>ul {
+  align-items: center
+}
+
+.\[\&\>ul\]\:gap-6>ul {
+  gap: 1.5rem
+}
+
+.\[\&\>ul\]\:gap-12>ul {
+  gap: 3rem
+}
+
+.\[\&\>ul\]\:gap-y-6>ul {
+  row-gap: 1.5rem
+}
+
+.\[\&\>ul\]\:gap-y-8>ul {
+  row-gap: 2rem
+}
+
+.\[\&\>ul\]\:gap-x-8>ul {
+  -moz-column-gap: 2rem;
+       column-gap: 2rem
+}
+
+.\[\&\>ul\]\:gap-x-12>ul {
+  -moz-column-gap: 3rem;
+       column-gap: 3rem
+}
+
+.\[\&\>ul\]\:gap-y-12>ul {
+  row-gap: 3rem
+}
+
+.\[\&\>ul\]\:gap-x-6>ul {
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem
+}
+
+@media (min-width: 768px) {
+  .md\:\[\&\>ul\]\:flex-col>ul {
+    flex-direction: column
+  }
+
+  .\[\&\>ul\]\:md\:flex-col>ul {
+    flex-direction: column
+  }
+}
