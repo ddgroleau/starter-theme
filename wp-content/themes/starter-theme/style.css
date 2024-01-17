@@ -53,49 +53,32 @@ html {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-@keyframes fadeInUp {
-  from {
+@media (min-width: 768px) {
+  .faded-out {
     transform: translateY(90px);
     opacity: 0;
+    transition: opacity 0.7s, transform 0.7s;
   }
-  to {
+
+  .faded-in {
     transform: translateY(0);
     opacity: 1;
+    transition: opacity 0.7s, transform 0.7s;
   }
 }
 
-.fade-in-up {
-  animation: 0.75s both fadeInUp;
-}
-
-@keyframes fadeInLeft {
-  from {
+@media (max-width: 767px) {
+  .faded-out-left {
     transform: translateX(-200px);
     opacity: 0;
+    transition: opacity 0.15s ease-in, transform 0.15s ease-in;
   }
-  to {
+
+  .faded-in-left {
     transform: translateX(0);
     opacity: 1;
+    transition: opacity 0.15s ease-out, transform 0.15s ease-out;
   }
-}
-
-.fade-in-left {
-  animation: fadeInLeft 0.4s;
-}
-
-@keyframes fadeOutLeft {
-  to {
-    transform: translateX(-200px);
-    opacity: 0;
-  }
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.fade-out-left {
-  animation: fadeOutLeft 0.2s;
 }
 
 header a {
@@ -105,7 +88,7 @@ header a {
 .mobile-nav-show {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -118,4 +101,30 @@ header a {
 
 .mobile-nav-show > div > ul {
   flex-direction: column;
+}
+
+/* Mobile hamburger menu */
+.bar1,
+.bar2,
+.bar3 {
+  width: 36px;
+  height: 4px;
+  background-color: black;
+  margin: 6px 0;
+  transition: 0.3s;
+}
+
+/* Rotate first bar */
+.change.bar1 {
+  transform: translate(0, 10px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change.bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change.bar3 {
+  transform: translate(0, -10px) rotate(45deg);
 }

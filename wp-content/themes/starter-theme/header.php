@@ -14,9 +14,9 @@
 
 <body class="flex flex-col min-h-screen max-w-screen w-screen h-full overflow-x-hidden">
     <header id="header" class="flex justify-between items-center py-4 px-8">
-        <a href="/" class="relative z-[999] max-w-fit"><?php bloginfo( 'name' ); ?></a>
+        <a href="/" class="relative z-[999] min-w-fit"><?php bloginfo( 'name' ); ?></a>
         <nav class="flex items-center">
-            <div id="nav-items" class="items-center hidden md:flex">
+            <div id="nav-items" class="faded-out-left fixed md:relative items-center md:flex">
                 <?php 
                 wp_nav_menu( 
                     array( 
@@ -25,14 +25,11 @@
                     ) ); 
                 ?>
             </div>
-            <button id="nav-toggle" class="h-12 w-12 max-w-fit" aria-label="Toggle Mobile Menu"
-                title="Toggle Mobile Menu">
-                <img id="open-menu-icon" class="md:hidden h-full w-full relative z-[999]"
-                    src="<?php echo get_template_directory_uri() . "/assets/images/hamburger-icon.svg" ?>"
-                    alt="Open Mobile Menu Icon" />
-                <img id="close-menu-icon" class="hidden md:hidden h-full w-full  relative z-[999]"
-                    src="<?php echo get_template_directory_uri() . "/assets/images/close-icon.svg" ?>"
-                    alt="Close Mobile Menu Icon" />
+            <button id="nav-toggle" class="relative h-12 w-12 md:hidden z-[999]" title="Toggle Nav"
+                aria-label="Toggle Nav">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
             </button>
         </nav>
     </header>

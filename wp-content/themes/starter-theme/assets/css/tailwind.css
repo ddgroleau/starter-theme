@@ -98,48 +98,12 @@
   --tw-backdrop-sepia:  
 }
 
-.absolute {
-  position: absolute
+.fixed {
+  position: fixed
 }
 
 .relative {
   position: relative
-}
-
-.right-2 {
-  right: 0.5rem
-}
-
-.top-2 {
-  top: 0.5rem
-}
-
-.right-4 {
-  right: 1rem
-}
-
-.top-4 {
-  top: 1rem
-}
-
-.top-8 {
-  top: 2rem
-}
-
-.right-8 {
-  right: 2rem
-}
-
-.right-6 {
-  right: 1.5rem
-}
-
-.top-16 {
-  top: 4rem
-}
-
-.top-12 {
-  top: 3rem
 }
 
 .z-\[999\] {
@@ -170,12 +134,13 @@
   width: 3rem
 }
 
-.w-full {
-  width: 100%
-}
-
 .w-screen {
   width: 100vw
+}
+
+.min-w-fit {
+  min-width: -moz-fit-content;
+  min-width: fit-content
 }
 
 .max-w-fit {
@@ -207,24 +172,6 @@
   gap: 1rem
 }
 
-.gap-x-8 {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem
-}
-
-.gap-x-12 {
-  -moz-column-gap: 3rem;
-       column-gap: 3rem
-}
-
-.gap-y-12 {
-  row-gap: 3rem
-}
-
-.gap-y-16 {
-  row-gap: 4rem
-}
-
 .overflow-x-hidden {
   overflow-x: hidden
 }
@@ -249,22 +196,30 @@
   padding-bottom: 2rem
 }
 
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem
+}
+
 .pr-4 {
   padding-right: 1rem
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem
-}
-
 @media (min-width: 768px) {
+  .md\:relative {
+    position: relative
+  }
+
   .md\:flex {
     display: flex
   }
 
   .md\:hidden {
     display: none
+  }
+
+  .md\:justify-between {
+    justify-content: space-between
   }
 }
 
@@ -276,55 +231,10 @@
   list-style-type: none
 }
 
-.\[\&\>ul\]\:flex-col>ul {
-  flex-direction: column
-}
-
 .\[\&\>ul\]\:items-center>ul {
   align-items: center
 }
 
-.\[\&\>ul\]\:gap-6>ul {
-  gap: 1.5rem
-}
-
 .\[\&\>ul\]\:gap-12>ul {
   gap: 3rem
-}
-
-.\[\&\>ul\]\:gap-y-6>ul {
-  row-gap: 1.5rem
-}
-
-.\[\&\>ul\]\:gap-y-8>ul {
-  row-gap: 2rem
-}
-
-.\[\&\>ul\]\:gap-x-8>ul {
-  -moz-column-gap: 2rem;
-       column-gap: 2rem
-}
-
-.\[\&\>ul\]\:gap-x-12>ul {
-  -moz-column-gap: 3rem;
-       column-gap: 3rem
-}
-
-.\[\&\>ul\]\:gap-y-12>ul {
-  row-gap: 3rem
-}
-
-.\[\&\>ul\]\:gap-x-6>ul {
-  -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem
-}
-
-@media (min-width: 768px) {
-  .md\:\[\&\>ul\]\:flex-col>ul {
-    flex-direction: column
-  }
-
-  .\[\&\>ul\]\:md\:flex-col>ul {
-    flex-direction: column
-  }
 }

@@ -9,4 +9,6 @@ else
     docker stop $name && docker rm $name; \
 fi;
 
-docker compose up --detach;
+docker system prune --force --volumes;
+docker compose --file docker-compose.dev.yml up --detach;
+cd wp-content/themes/$name && npx tailwindcss -i ./assets/css/style.css -o ./assets/css/tailwind.css --watch

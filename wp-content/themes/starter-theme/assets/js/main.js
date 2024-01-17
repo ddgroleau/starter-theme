@@ -8,12 +8,15 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   if (elementsToFadeInUpOnScroll) {
-    window.addEventListener("scroll", (event) => {
-      elementsToFadeInUpOnScroll.forEach((element) => {
-        if (window.scrollY >= element.offsetTop - window.innerHeight) {
-          element.classList.add("fade-in-up");
+    window.addEventListener("scroll", function (event) {
+      elementsToFadeInUpOnScroll.forEach(function (element) {
+        const offsetTop = getElementOffset(element);
+        if (window.scrollY >= offsetTop - window.innerHeight + 100) {
+          element.classList.remove("faded-out");
+          element.classList.add("faded-in");
         } else {
-          element.classList.remove("fade-in-up");
+          element.classList.add("faded-out");
+          element.classList.remove("faded-in");
         }
       });
     });
@@ -22,30 +25,39 @@ document.addEventListener("DOMContentLoaded", () => {
   // Navbar
   const navToggle = $("#nav-toggle");
   const navItems = $("#nav-items");
-  const openIcon = $("#open-menu-icon");
-  const closeIcon = $("#close-menu-icon");
 
-  navToggle.addEventListener("click", () => {
-    if (navItems.classList.contains("hidden")) {
-      // Add fade in animation and show nav items
-      navItems.classList.remove("hidden");
-      openIcon.classList.toggle("hidden");
-      closeIcon.classList.toggle("hidden");
-      navItems.classList.add("mobile-nav-show", "fade-in-left");
+  const toggleNav = () => {
+    [
+      document.querySelector(".bar1"),
+      document.querySelector(".bar2"),
+      document.querySelector(".bar3"),
+    ].forEach((x) => x.classList.toggle("change"));
+
+    if (navItems.classList.contains("faded-out-left")) {
+      navItems.classList.add("mobile-nav-show", "faded-in-left");
+      document.body.style.overflow = "hidden";
+      navItems.classList.remove("faded-out-left");
     } else {
-      // Remove fade in animation and add fade-out
-      navItems.classList.remove("fade-in-left");
-      navItems.classList.add("fade-out-left");
+      navItems.classList.add("faded-out-left");
+      navItems.classList.remove("faded-in-left");
+    }
+  };
+
+  navItems.addEventListener("transitionend", () => {
+    if (navItems.classList.contains("faded-out-left")) {
+      navItems.classList.remove("mobile-nav-show", "faded-in-left");
+      document.body.style.overflow = "auto";
     }
   });
 
-  navItems.addEventListener("animationend", () => {
-    if (navItems.classList.contains("fade-out-left")) {
-      // If fade out end, hide nav items again
-      navItems.classList.add("hidden");
-      openIcon.classList.toggle("hidden");
-      closeIcon.classList.toggle("hidden");
-      navItems.classList.remove("mobile-nav-show", "fade-out-left");
-    }
-  });
+  navToggle.addEventListener("click", toggleNav);
 });
+
+function getElementOffset(element) {
+  let offsetTop = 0;
+  while (element) {
+    offsetTop += element.offsetTop;
+    element = element.offsetParent;
+  }
+  return offsetTop;
+}
