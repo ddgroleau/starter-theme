@@ -2,3 +2,4 @@
 
 *node_modules
 *debug.log
+wp-content/themes/**/twenty*
